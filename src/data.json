@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id" : 0,
+      "name": "Sam",
+      "message": "Hallo wereld!",
+      "likes": 3
+    },
+    {
+      "id" : 1,
+      "name": "Metten",
+      "message": "HOI",
+      "likes": 4
+    },
+    {
+      "id" : 2,
+      "name": "Tessa",
+      "message": "Ik praat niet met non gamers.",
+      "likes": 420
+    },
+    {
+      "id" : 3,
+      "name": "Tim",
+      "message": "New phone who dis?",
+      "likes": 69
+    }
+  ]
+}

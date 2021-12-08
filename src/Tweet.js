@@ -1,5 +1,6 @@
 //states zijn variabelen voor componenten en moeten eerst geimport worden bovenaan
 import React, {useState} from "react";
+import {users} from "./data.json";
 import './App.css';
 
 
@@ -19,6 +20,7 @@ function Tweet(props) {
     const addLike = () => {
         if (!liked) {
             setLikes(likes + 1);
+            //users[props.id].likes = likes + 1;
             setButtonText("Dislike");
         }
         else {
@@ -32,6 +34,11 @@ function Tweet(props) {
         setIsGreen(!isGreen);
     }
 
+    const deleteTweet = (el) => {
+        //Filter de tweets array en haal alle objecten eruit waarvan het id gelijk staat aan het id van deze specifieke component
+        props.setTweets(props.tweets.filter((el) => el.id !== props.id))
+    }
+
     //Classed worden in JSX toegevoegd met "className"
     //Geef de gray class die de achtergrond grijs maakt wanneer de state setIsGray true is
     //Er kunnen geen if statements gebruikt worden in JSX. Gebruik in plaats daarvan ternary operators (setIsGray? true situatie : false situatie)
@@ -41,6 +48,7 @@ function Tweet(props) {
             <p>{props.message}</p>
             <h3>{likes}</h3>
             <button className={isGreen ? "green" : ""} disabled={disabled} onClick={addLike}>{buttonText}</button>
+            <button onClick={deleteTweet}>DELETE</button>
         </div>
     )
 }
