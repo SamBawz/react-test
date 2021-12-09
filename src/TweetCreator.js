@@ -26,11 +26,11 @@ function TweetCreator(props) {
 
     //onChange event om de ingevoerde informatie meteen in een state te zetten en later te gebruiken
     return (
-        <div className="tweet">
+        <div className="tweet tweet-creator">
             <form>
-                <h3>Name</h3>
+                <h1>Create your tweet</h1>
                 <input type="text" required placeholder="Name" onChange={e => setName(e.target.value)} value={name}/>
-                <h3>Message</h3>
+                <br/>
                 <input type="text" required placeholder="Message" onChange={e => setMessage(e.target.value)} value={message}/>
                 <br/>
                 <button onClick={createTweet} >Post</button>

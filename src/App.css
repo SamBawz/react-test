@@ -1,17 +1,18 @@
 .app {
   text-align: center;
-  background-color: darkslategray;
+  background-color: wheat;
   color: white;
   min-height: 100vh;
   top: 0;
 }
 
 .tweet {
-  border-radius: 30px;
-  margin-top: 2rem;
-  height: 300px;
-  width: 300px;
-  background-color: white;
+  box-shadow: black 1px 1px 10px;
+  border: 1px solid black;
+  margin: 2rem 2rem 2rem 2rem;
+  min-height: 15rem;
+  width: 20rem;
+  background-color: rgba(255,255,255,0.5);
   color: black;
 
   display: flex;
@@ -23,6 +24,7 @@
 
 .tweet button {
   padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: auto 0.5rem auto 0.5rem;
   border-radius: 10px;
   font-size: 1rem;
   background-color: darkred;
@@ -39,10 +41,38 @@
 
 .tweet-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  //margin: auto 25rem auto 25rem;
+  //background-color: slategray;
 }
 
+.tweet-creator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  height: 100%;
+}
+
+.tweet-creator {
+  border: none;
+  transform: scale(1.5);
+  width: 66.6%;
+  overflow-x: hidden;
+  background-color: burlywood;
+  border-bottom: 1px solid black;
+}
+
+.tweet-creator button {
+  margin-top: 1rem;
+  background-color: steelblue;
+}
+
+.tweet-creator input {
+  margin-top: 1rem;
+}
 
 

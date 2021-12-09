@@ -32,12 +32,12 @@ function App() {
     //Key kan niet als property gebruikt worden omdat react deze nodig heeft om 100% functioneel te renderen. Daarom maak ik ook id aan met dezelfde waarde
     return (
         <div className="app">
-            <h1>This is the app component</h1>
-            <Hello></Hello>
-            <TweetCreator
-                tweets={tweets}
-                setTweets={setTweets}>
-            </TweetCreator>
+            <div className="tweet-creator-container">
+                <TweetCreator
+                    tweets={tweets}
+                    setTweets={setTweets}>
+                </TweetCreator>
+            </div>
             <div className="tweet-container">
                 {tweets.map(tweet => (
                     <Tweet

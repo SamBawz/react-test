@@ -46,9 +46,11 @@ function Tweet(props) {
         <div className="tweet">
             <h3>{props.name}</h3>
             <p>{props.message}</p>
-            <h3>{likes}</h3>
-            <button className={isGreen ? "green" : ""} disabled={disabled} onClick={addLike}>{buttonText}</button>
-            <button onClick={deleteTweet}>DELETE</button>
+            <h3>{likes} likes</h3>
+            <div>
+                <button className={isGreen ? "green" : ""} disabled={disabled} onClick={addLike}>{buttonText}</button>
+                <button onClick={deleteTweet}>Delete</button>
+            </div>
         </div>
     )
 }
